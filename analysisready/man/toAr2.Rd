@@ -8,6 +8,20 @@ toAr2(x, region, lookup = NULL, cutoff = 3)
 }
 \arguments{
 \item{x}{a data.frame of AR1.0 data}
+
+\item{region}{A string of the region the AR1.0 data is collected from:
+FLA KEYS, SEFCRI, or DRTO}
+
+\item{lookup}{A data.frame containing a column named SPECIES_CD
+with species codes and KEEP_10MIN containing
+a 1 if the species should be included after 10
+minutes (TIME_SEEN > 2) and a zero otherwise.
+If NULL function just drops all records
+with TIME_SEEN > 2}
+
+\item{cutoff}{A numeric value of visibility (in meters)
+below which to drop records. Default
+value is 3 meters}
 }
 \value{
 A data.frame of AR2.0 data

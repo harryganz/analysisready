@@ -1,9 +1,9 @@
-# Adds strata for Dry Tortugas region
-# @inheritParams addStrata
-# @return 
-# A data.frame with the original AR2.0 data with
-# a STRAT column added containing the stratum to
-# which a record belongs
+#' Adds strata for Florida Keys region
+#' @inheritParams addStrata
+#' @return 
+#' A data.frame with the original AR2.0 data with
+#' a STRAT column added containing the stratum to
+#' which a record belongs
 addStrataFK  <- function(x){
   ## Add AVG_PSU_DEPTH, to be dropped later
   
