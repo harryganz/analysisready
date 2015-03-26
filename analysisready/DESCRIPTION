@@ -8,4 +8,4 @@ Maintainer: Harry Ganz <hganz@rsmas.miami.edu>
 Description: A set of functions for converting AR1.0 RVC data to AR2.0 
   data
 License: GPL-v3
-
+Suggests: testthat
