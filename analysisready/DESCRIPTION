@@ -1,0 +1,11 @@
+Package: analysisready
+Type: Package
+Title: A package for converting AR1.0 data to AR2.0 Data
+Version: 0.0.1
+Date: 2015-3-26
+Author: Harry Ganz
+Maintainer: Harry Ganz <hganz@rsmas.miami.edu>
+Description: A set of functions for converting AR1.0 RVC data to AR2.0 
+  data
+License: GPL-v3
+
