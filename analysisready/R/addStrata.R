@@ -18,7 +18,7 @@ addStrata  <- function(x, region){
   s_region  <- gsub(' ','_',region);
   ## Switch how strata are calculated depending
   ## on region
-  out  <- switch(region,
+  out  <- switch(s_region,
                  FLA_KEYS = addStrataFK(x),
                  DRTO = addStrataDT(x),
                  SEFCRI = addStrataSF(x)
