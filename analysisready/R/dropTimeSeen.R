@@ -1,4 +1,5 @@
 #' Drops rows from AR1.0 data based on TIME_SEEN
+#' @export
 #' @description
 #' Drops records from AR1.0 data with TIME_SEEN
 #' > 2 or based on information from a lookup table

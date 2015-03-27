@@ -1,4 +1,5 @@
 #' Adds strata to AR1.0 data
+#' @export
 #' @description
 #' Adds a column of strata to AR1.0 data
 #' @param x
