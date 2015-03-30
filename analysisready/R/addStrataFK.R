@@ -9,9 +9,7 @@ addStrataFK  <- function(x){
   d  <- addAvgPsuDepth(x);
   ## Drop records before april in 2004 and 2005
   d  <- subset(d, !(YEAR >= 2004 & YEAR <= 2005 & MONTH < 4));
-  
-  ## Assigning Strata divided into 3 branches ##
-  
+
   ## Assign STRAT column
   d$STRAT  <-  with(d,
                     ifelse(
@@ -20,7 +18,7 @@ addStrataFK  <- function(x){
     ifelse(
       ZONE_NR < 4,
       ifelse(
-        YEAR == 1994 || YEAR == 1996 || ZONE_NR == 2,
+        YEAR == 1994 | YEAR == 1996 | ZONE_NR == 2,
         "MCPR",
         ifelse(
           ZONE_NR == 1,
@@ -34,7 +32,7 @@ addStrataFK  <- function(x){
           AVERAGE_PSU_DEPTH >= 6,
           "FMLR",
           ifelse(
-            YEAR == 1994 || YEAR == 1996 || 
+            YEAR == 1994 | YEAR == 1996 | 
               (YEAR == 1998 & PROT == 1),
             "FMLR",
             "FSLR"
@@ -54,7 +52,7 @@ addStrataFK  <- function(x){
   )
   )
   ## Drop AVERAGE_PSU_DEPTH
-  drop  <- names(d) == "AVERAGE_PSU_DEPTH"
-  out  <- d[-drop];
+  keep  <- names(d)[names(d) != "AVERAGE_PSU_DEPTH"]
+  out  <- d[keep];
   return(out)
 }
