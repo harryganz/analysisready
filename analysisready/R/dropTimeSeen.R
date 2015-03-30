@@ -20,12 +20,19 @@
 #' whatever was specified in the lookup table
 #'  dropped
 dropTimeSeen  <- function(x, lookup = NULL){
-  ## Match species from x and lookup, unless 
-  ## lookup is NULL
-  
-  ## Drop rows where TIME_SEEN > 2, unless 
-  ## matched in the lookup
+  ## Make a list of species to keep
+  keep  <- NULL;
+  if (!is.null(lookup)){
+    keep  <- with(
+      lookup,
+      SPECIES_CD[KEEP_10MIN == 1] 
+    );
+  }
+  ## Unless matched in lookup, subset data 
+  ## by timeseen <= 2
+  out  <- subset(x, SPECIES_CD %in% keep | 
+                   TIME_SEEN <= 2);
   
   ## Return trimmed data
-  return(NULL)
+  return(out)
 }
