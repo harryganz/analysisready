@@ -15,7 +15,7 @@
 #' which a record belongs
 addStrata  <- function(x, region){
   ## Replace spaces in region argument with underscores
-  s_region  <- gsub(' ','_',region);
+  s_region  <- gsub(' ','_',toupper(region));
   ## Switch how strata are calculated depending
   ## on region
   out  <- switch(s_region,
