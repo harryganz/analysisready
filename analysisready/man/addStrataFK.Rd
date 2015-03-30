@@ -13,8 +13,7 @@ column HABITAT_CD indicating the habitat}
 }
 \value{
 A data.frame with the original AR2.0 data with
-a STRAT column added containing the stratum to
-which a record belongs
+a STRAT  and REGION column added
 }
 \description{
 Adds strata for Florida Keys region

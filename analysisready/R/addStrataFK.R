@@ -2,8 +2,7 @@
 #' @inheritParams addStrata
 #' @return 
 #' A data.frame with the original AR2.0 data with
-#' a STRAT column added containing the stratum to
-#' which a record belongs
+#' a STRAT  and REGION column added
 addStrataFK  <- function(x){
   ## Add AVERAGE_PSU_DEPTH, to be dropped later
   d  <- addAvgPsuDepth(x);
@@ -51,6 +50,8 @@ addStrataFK  <- function(x){
     )
   )
   )
+  ## Add region column
+  d$REGION  <- rep("FLA KEYS", nrow(d));
   ## Drop AVERAGE_PSU_DEPTH
   keep  <- names(d)[names(d) != "AVERAGE_PSU_DEPTH"]
   out  <- d[keep];
