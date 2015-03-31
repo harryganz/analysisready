@@ -46,6 +46,9 @@ The following example should demonstrate how to use it:
 ## Read in 1.0 data
 fk2008_1.0  <- read.csv('fk2008_1.csv');
 
+# Variables names should be uppercase
+names(fk2008_1.0) <- toupper(names(fk2008_1.0));
+
 ## Load lookup table of species which are to be kept
 ## if seen after 10 minutes. This data.frame should
 ## contain at least two columns. One called
