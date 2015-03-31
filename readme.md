@@ -4,7 +4,9 @@ This package is really intended as a tool for data managers at UM-RSMAS to produ
 ## Installation ##
 ### From Source File ###
 To install the latest compiled version of analysis ready.
+
 1. Download the binary package zip file located in the root of this repository. It is named something like analysisready\_0.1.1.zip
+ * Click on the file, then click on the RAW button to download it
 2. Use the install.packages command to install the package in R
  * Open R
  * Enter the following
