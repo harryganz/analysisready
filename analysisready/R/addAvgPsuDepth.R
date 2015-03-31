@@ -1,5 +1,4 @@
 #' Adds AVERAGE_PSU_DEPTH to a data.frame 
-#' @export
 #' @param x
 #' A data.frame containing the columns DEPTH, STATION_NR,
 #' and PRIMARY_SAMPLE_UNIT

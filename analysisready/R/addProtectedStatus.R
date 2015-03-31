@@ -1,5 +1,4 @@
 #' Generates a column of protected statuses
-#' @export
 #' @description
 #' Generates a column, PROT, with the protected
 #' status of each record given a data.frame of 

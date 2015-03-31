@@ -1,5 +1,4 @@
 #' Drops records with invalid habitats
-#' @export
 #' @param x
 #' A data.frame containing AR1.0 data 
 #' with a column named HABITAT_CD

@@ -1,5 +1,4 @@
 #' Drops rows from data based on visibility
-#' @export
 #' @description Drop rows from AR1.0 data with 
 #' UNDERWATER_VISIBILITY below cutoff value and 
 #' return a data.frame
