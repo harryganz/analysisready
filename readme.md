@@ -8,27 +8,35 @@ To install the latest compiled version of analysis ready.
 2. Use the install.packages command to install the package in R
  * Open R
  * Enter the following
+ 
  ```
  ## Replace path_to_source_file with the directory location
  ## of the binary source zip file you just downloaded
  install.packages('path_to_source_file/analysisready_0.1.1.zip', repos = NULL)
  ```
+
 3. To check that it is installed try to load it
+
 ```
 library(analysisready)
 ```
+
 If it is installed properly that should not return any errors
- ```
+
 ### Using devtools package ###
 If you don't have devtools installed, you can install it by entering the following in R
+
 ```
 install.packages('devtools')
 ```
+
 To install the latest development version of the analysisready package, just type the following in R
+
 ```
 require(devtools)
 devtools::install_github('harryganz/analysisready/analysisready')
 ```
+
 ## Using this package ##
 This package contains only one public function: toAr2. It does pretty much what you would think, convert AR1.0 data to AR2.0 data. 
 The following example should demonstrate how to use it:
