@@ -27,11 +27,11 @@ dropTimeSeen  <- function(x, lookup = NULL){
       SPECIES_CD[KEEP_10MIN == 1] 
     );
   }
-  ## Unless matched in lookup, subset data 
-  ## by timeseen <= 2
-  out  <- subset(x, SPECIES_CD %in% keep | 
-                   TIME_SEEN <= 2);
-  
+  ## Unless matched in lookup or TIME_SEEN <= 2
+  ## set NUM to zero
+  out  <- x;
+  out$NUM  <- with(x,ifelse(SPECIES_CD %in% keep | 
+                   TIME_SEEN <= 2, NUM, 0));
   ## Return trimmed data
   return(out)
 }
