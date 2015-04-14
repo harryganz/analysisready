@@ -9,6 +9,9 @@
 #' @inheritParams dropUnderwaterVisibility
 #' @return A data.frame of AR2.0 data
 toAr2  <- function(x, region, lookup = NULL, cutoff = 3){
+  ## Turn var names to capitals
+  names(x)  <- toupper(names(x));
+  
   out  <- addStrata(
     dropInvalidHabitats(
     addProtectedStatus(
