@@ -36,7 +36,7 @@ To install the latest development version of the analysisready package, just typ
 
 ```
 require(devtools)
-devtools::install_github('harryganz/analysisready/analysisready')
+devtools::install_github('jeremiaheb/analysisready/analysisready')
 ```
 
 ## Using this package ##
