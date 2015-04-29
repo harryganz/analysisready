@@ -43,6 +43,8 @@ addStrataSF  <- function(x){
       )
     )
     );
+  ## Paste rugosity to calculate final strata
+  out$STRAT  <- paste(out$STRAT, out$RUGOSITY_CD, sep = "");
   ## Add Region column
   out$REGION  <- rep("DRTO",nrow(out));
   ## Remove AVERAGE_PSU_DEPTH
