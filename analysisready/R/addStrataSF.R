@@ -23,7 +23,7 @@ addStrataSF  <- function(x){
       HABITAT_CD == "CPSH" | HABITAT_CD == "RGSH",
       "NEAR",
       ifelse(
-        HABIAT_CD == "LIRI",
+        HABITAT_CD == "LIRI",
         "INNR",
         ifelse(
           HABITAT_CD == "LIRM",
@@ -46,7 +46,7 @@ addStrataSF  <- function(x){
   ## Paste rugosity to calculate final strata
   out$STRAT  <- paste(out$STRAT, out$RUGOSITY_CD, sep = "");
   ## Add Region column
-  out$REGION  <- rep("DRTO",nrow(out));
+  out$REGION  <- rep("SEFCRI",nrow(out));
   ## Remove AVERAGE_PSU_DEPTH
   keep  <- names(out) != "AVERAGE_PSU_DEPTH";
   out  <- out[keep];
