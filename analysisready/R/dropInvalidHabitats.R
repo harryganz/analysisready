@@ -7,7 +7,7 @@
 #' codes
 #' @return A data.frame with records
 #' from invalid habitats removed
-dropInvalidHabitats  <- function(x, invalid_habs = c("ARFT_NA", "SAND_NA", "SGRS_NA", "UCHB_LR")){
+dropInvalidHabitats  <- function(x, invalid_habs = c("ARTF_NA", "SAND_NA", "SGRS_NA", "UCHB_LR")){
   out  <- subset(x, !(HABITAT_CD %in% invalid_habs));
   return(out)
 }
