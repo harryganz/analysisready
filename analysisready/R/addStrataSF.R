@@ -17,7 +17,7 @@ addStrataSF  <- function(x){
     ifelse(
       AVERAGE_PSU_DEPTH < 20,
       "PTSH",
-      "PTPD"
+      "PTDP"
       ),
     ifelse(
       HABITAT_CD == "CPSH" | HABITAT_CD == "RGSH",
