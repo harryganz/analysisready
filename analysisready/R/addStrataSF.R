@@ -43,6 +43,10 @@ addStrataSF  <- function(x){
       )
     )
     );
+  ## If STRAT is PTSH change RUGOSITY_CD to 2
+  ## Combined 0 and 1 for PTSH
+  out$RUGOSITY_CD  <- with(out, 
+                     ifelse(STRAT == "PTSH", 2, RUGOSITY_CD));
   ## Paste rugosity to calculate final strata
   out$STRAT  <- paste(out$STRAT, out$RUGOSITY_CD, sep = "");
   ## Add Region column
