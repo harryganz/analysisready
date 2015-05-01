@@ -13,7 +13,7 @@ addProtectedStatus  <- function(x){
   out  <- x;
   out$PROT  <- with(out,
                     ifelse(
-                      SUBREGION_NR == 4,
+                      SUBREGION_NR == 4 | (SUBREGION_NR == 3 & YEAR <= 2000),
                       2,
                       ifelse(
                         MPA_NR > 0,
