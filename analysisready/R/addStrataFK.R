@@ -30,8 +30,7 @@ addStrataFK  <- function(x){
         ifelse(
           AVERAGE_PSU_DEPTH >= 6,
           "FMLR",
-          ifelse(
-            YEAR == 1994 | YEAR == 1996 | 
+          ifelse( 
               (YEAR == 1998 & PROT == 1),
             "FMLR",
             "FSLR"
