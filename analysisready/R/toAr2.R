@@ -12,7 +12,11 @@ toAr2  <- function(x, region, lookup = NULL, cutoff = 3){
   ## Turn var names to capitals
   names(x)  <- toupper(names(x));
   
-  out  <- addStrata(
+  out  <- removeZeroes(
+    calculateN(
+    calculateNM(
+    calculateM(
+    addStrata(
     dropInvalidHabitats(
     addProtectedStatus(
     dropUnderwaterVisibility(
@@ -20,6 +24,6 @@ toAr2  <- function(x, region, lookup = NULL, cutoff = 3){
     cutoff
     ))),
     region
-    );
+    )))));
   return(out)
 }
