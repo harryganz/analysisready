@@ -1,6 +1,6 @@
 context("testing dropInvalidHabitats")
 d  <- data.frame(
-  HABITAT_CD = c("ARFT_NA", "SAND_NA", "SPGR_LR"),
+  HABITAT_CD = c("ARTF_NA", "SAND_NA", "SPGR_LR"),
   DUMMY = c(1,1,1)
   );
 # Test that it drops invalid habitat and keeps valid habitat
