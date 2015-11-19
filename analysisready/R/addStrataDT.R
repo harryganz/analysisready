@@ -33,7 +33,7 @@ addStrataDT  <- function(x){
   );
     
   ## Add REGION to output
-  out$REGION  <- rep("DRTO", nrow(out));
+  out$REGION  <- rep("DRY TORT", nrow(out));
     
   return(out)
 }

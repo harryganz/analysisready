@@ -7,7 +7,7 @@
 #' column HABITAT_CD indicating the habitat
 #' @param region
 #' A string of the region the AR1.0 data is collected from:
-#' FLA KEYS, SEFCRI, or DRTO
+#' FLA KEYS, SEFCRI, or DRY TORT
 #' @return 
 #' A data.frame with the original AR2.0 data with
 #' a STRAT column added containing the stratum to
@@ -19,7 +19,7 @@ addStrata  <- function(x, region){
   ## on region
   out  <- switch(s_region,
                  FLA_KEYS = addStrataFK(x),
-                 DRTO = addStrataDT(x),
+                 DRY_TORT = addStrataDT(x),
                  SEFCRI = addStrataSF(x)
                  );
   return(out)
