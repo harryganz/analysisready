@@ -15,7 +15,7 @@ addProtectedStatus  <- function(x){
                     ifelse( 
                       YEAR < 1998, 0,
                       ifelse(
-                        SUBREGION_NR == 4 | (SUBREGION_NR == 3 & YEAR <= 2000),
+                        SUBREGION_NR == 4,
                         2,
                         ifelse(
                           MPA_NR > 0 & !(YEAR == 2014 & SUBREGION_NR == 12),
